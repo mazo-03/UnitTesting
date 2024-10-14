@@ -15,8 +15,10 @@ public class TrackingSet<T> {
     }
 
     public void remove(T item) {
-        innerSet.remove(item);
-        removalsCount += 1;
+        if (innerSet.contains(item)) {
+            innerSet.remove(item);
+            removalsCount += 1;
+        }
     }
 
     public int getOperationsCount() {
