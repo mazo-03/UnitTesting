@@ -2,6 +2,7 @@ package main;
 
 public class BasicUtils {
     public static String reversed(String str) {
+
         return new StringBuilder(str).reverse().toString();
     }
 
